@@ -1,0 +1,16 @@
+<html>
+<head></head>
+<body>
+    <h1 class="w3-text-teal">Create a new note</h1>
+
+    <form action="{% url 'note_add' %}" method="post">
+    {% csrf_token %}
+        <p><b>Note text:</b></p>
+        <textarea name="note_text" rows="10" cols="60"></textarea>
+        </p>
+        <input type="submit" value="Save note" />
+    </form>
+    </p>
+    <a href="/notes">Back to index</a>
+</body>
+</html>

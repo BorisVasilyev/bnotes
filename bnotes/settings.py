@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ['bnotes-dev.us-west-2.elasticbeanstalk.com', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+    'bnotes_app.apps.BnotesAppConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -71,7 +72,8 @@ WSGI_APPLICATION = 'bnotes.wsgi.application'
 
 
 # Database
-# https://docs.djangoproject.com/en/3.0/ref/settings/#databases
+# Settings based on RDS environmental variables
+# Source setup_dev_evn.sh (. setup_dev_env.sh) before starting the app in Dev environment
 
 DATABASES = {
     'default': {
@@ -108,7 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Toronto'
 
 USE_I18N = True
 

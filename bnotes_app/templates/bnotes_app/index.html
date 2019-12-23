@@ -1,0 +1,24 @@
+<html>
+<head></head>
+<body>
+    <h1 class="w3-text-teal">Welcome to BNotes</h1>
+
+    <a href="/notes/new">Create a new note</a>
+
+    {% if notes_list %}
+        {% for note in notes_list %}
+        <div style="background:#00ff00">
+            <p>
+                {{ note.content|safe }}
+            </p>
+            <p>
+                {{ note.created_date }}
+            </p>
+            <p>
+                <a href="/notes/{{ note.id }}/edit">Edit</a> <a href="/notes/{{ note.id }}/delete">Delete</a>
+            </p>
+        </div>
+        {% endfor %}
+    {% endif %}
+</body>
+</html>
