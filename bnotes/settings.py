@@ -25,7 +25,7 @@ SECRET_KEY = 'q#o#^w9&0f63)#53&%0but771$vz0vhy^v6s12-7y&0imsg-cy'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['bnotes-dev.us-west-2.elasticbeanstalk.com', '127.0.0.1']
+ALLOWED_HOSTS = ['bnotes-env.ry5u7jwmqn.us-west-2.elasticbeanstalk.com', '127.0.0.1']
 
 
 # Application definition
